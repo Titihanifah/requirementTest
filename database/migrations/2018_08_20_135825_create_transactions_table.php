@@ -15,6 +15,11 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('description');
+            $table->date('date_paid');
+            $table->enum('category',['income'],['expense']);
+            $table->string('name_transaction');
+            $table->integer('nominal');
             $table->timestamps();
         });
     }
