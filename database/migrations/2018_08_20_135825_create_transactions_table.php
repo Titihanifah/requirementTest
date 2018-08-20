@@ -18,7 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->text('description');
             $table->date('date_paid');
             $table->enum('category',['income','expense']);
-            $table->string('name_transaction');
+            $table->string('name');
             $table->integer('nominal');
             $table->timestamps();
         });

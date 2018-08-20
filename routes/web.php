@@ -11,6 +11,16 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('/transaction', 'TransactionController');
+
+Route::get('/transaction/destroy/{id}', 'TransactionController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
