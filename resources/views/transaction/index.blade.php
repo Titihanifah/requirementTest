@@ -1,7 +1,9 @@
 @extends('layouts.temp')
 @section('content')
 
+    <a href="{{ url('/transaction/create') }}" class="btn btn-primary">Tambah</a>
     <table>
+
         <tr>
             <td>No</td>
             <td>Deskripsi</td>

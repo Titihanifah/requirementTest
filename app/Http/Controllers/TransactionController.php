@@ -15,7 +15,7 @@ class TransactionController extends Controller
     public function index()
     {
         // get all data transactions
-        $transaction = Transaction::all();
+        $transaction = Transaction::paginate(10);
 //        dd($transaction);
 
         // redirect ke halaman index
