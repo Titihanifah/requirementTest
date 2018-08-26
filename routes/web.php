@@ -21,6 +21,14 @@ Route::get('/', function () {
 Route::resource('/transaction', 'TransactionController');
 
 Route::get('/transaction/destroy/{id}', 'TransactionController@destroy');
+
+Route::get('/jquery', function(){
+   return view('jquery.index');
+});
+Route::get('/html', function(){
+    return view('html.index');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
