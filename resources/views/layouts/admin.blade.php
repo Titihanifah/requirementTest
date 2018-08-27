@@ -33,7 +33,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="./"><img src="{{url('assets/images/logo.png')}}" alt="Logo"></a>
+            <a class="navbar-brand" href="./">Transaksi</a>
             <a class="navbar-brand hidden" href="./"><img src="{{url('assets/images/logo2.png')}}" alt="Logo"></a>
         </div>
 
@@ -45,8 +45,12 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Data Transaksi</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="{{ url('transaction/create') }}">Tambah Data Transaksi</a></li>
-                        <li><i class="fa fa-id-badge"></i><a href="{{ url('transaction') }}">List Data Transaksi</a></li>
+                        @if(Auth::user())
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url('transaction/create') }}">Tambah Data Transaksi</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url('transaction') }}">List Data Transaksi</a></li>
+                        @else
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url('transaction') }}">List Data Transaksi</a></li>
+                        @endif
 
                     </ul>
                 </li>
@@ -68,35 +72,17 @@
             <div class="col-sm-7">
             </div>
             <div class="col-sm-5">
-                <div class="user-area dropdown float-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="user-avatar rounded-circle" src="{{ url('assets/images/admin.jpg') }}" alt="User Avatar">
-                    </a>
-                    <div class="user-menu dropdown-menu">
+                {{--<div class="user-area dropdown float-right">--}}
+                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                        {{--<img class="user-avatar rounded-circle" src="{{ url('assets/images/admin.jpg') }}" alt="User Avatar">--}}
+                    {{--</a>--}}
+                    {{--<div class="user-menu dropdown-menu">--}}
 
-                        <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
-                    </div>
-                </div>
+                        {{--<a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <div class="language-select dropdown" id="language-select">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
-                        <i class="flag-icon flag-icon-us"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="language" >
-                        <div class="dropdown-item">
-                            <span class="flag-icon flag-icon-fr"></span>
-                        </div>
-                        <div class="dropdown-item">
-                            <i class="flag-icon flag-icon-es"></i>
-                        </div>
-                        <div class="dropdown-item">
-                            <i class="flag-icon flag-icon-us"></i>
-                        </div>
-                        <div class="dropdown-item">
-                            <i class="flag-icon flag-icon-it"></i>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
 

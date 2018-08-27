@@ -23,6 +23,8 @@ Route::resource('/transaction', 'TransactionController');
 Route::get('/transaction/destroy/{id}', 'TransactionController@destroy');
 Route::get('/transaction', 'TransactionController@paginate');
 Route::get('/transaction', 'TransactionController@category');
+//Route::get('/transaction', 'TransactionController@date_paid');
+
 
 Route::get('/jquery', function(){
    return view('jquery.index');

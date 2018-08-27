@@ -71,10 +71,10 @@
                     <td>{{ $key->category }}</td>
                     <td>{{ $key->name }}</td>
                     <td>{{ $key->nominal }}</td>
-                    <td>
-                        <a class="btn btn-primary" href="{{ url('transaction') }}/{{ $key->id }}/edit"><i class="fa fa-edit"></i> Edit</a>
-                        <a class="btn btn-danger" href="{{ url('transaction/destroy') }}/{{ $key->id }}"><i class="fa fa-trash-o"></i> Hapus </a>
-                    </td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ url('transaction') }}/{{ $key->id }}/edit"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-danger" href="{{ url('transaction/destroy') }}/{{ $key->id }}"><i class="fa fa-trash-o"></i> Hapus </a>
+                        </td>
                 </tr>
             @endforeach
         </table>

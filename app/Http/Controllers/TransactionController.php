@@ -115,22 +115,22 @@ class TransactionController extends Controller
     }
 
     // pagination with search
-    public function date_paid(Request $request)
-    {
-        $this->validate($request, [
-            'limit' => 'integer',
-        ]);
-
-        $transaction = Transaction::when($request->date_from,$request->to, function ($query) use ($request) {
-            $query->where('date_paid', '>=', $request->date_from)
-                ->orWhere('date_paid', '<=', $request->date_to);
-
-        })->paginate($request->limit ? $request->limit : 10);
-
-        $transaction->appends($request->only('keyword', 'limit'));
-
-        return view('transaction.index', compact('transaction'));
-    }
+//    public function date_paid(Request $request)
+//    {
+//        $this->validate($request, [
+//            'limit' => 'integer',
+//        ]);
+//
+//        $transaction = Transaction::when($request->date_from,$request->to, function ($query) use ($request) {
+//            $query->where('date_paid', '>=', $request->date_from)
+//                ->orWhere('date_paid', '<=', $request->date_to);
+//
+//        })->paginate($request->limit ? $request->limit : 10);
+//
+//        $transaction->appends($request->only('keyword', 'limit'));
+//
+//        return view('transaction.index', compact('transaction'));
+//    }
 
     /**
      * Display the specified resource.
