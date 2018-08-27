@@ -87,7 +87,7 @@
                     <a class="btn btn-primary" href="{{ url ('/html') }}">Slicing Sederhana</a>
                     <a class="btn btn-success" href="{{ url('/transaction') }}">Master Data</a>
                     <a class="btn btn-warning" href="{{ url('jquery') }}">JQuery</a>
-                    <a class="btn btn-info" href="#">Tes Logika</a>
+                    <a class="btn btn-info" href="{{ url('logika') }}">Tes Logika</a>
                     <a href="https://github.com/Titihanifah">GitHub</a>
                 </div>
             </div>

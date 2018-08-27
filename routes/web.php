@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::resource('/transaction', 'TransactionController');
 
 Route::get('/transaction/destroy/{id}', 'TransactionController@destroy');
+Route::get('/transaction', 'TransactionController@paginate');
+Route::get('/transaction', 'TransactionController@category');
 
 Route::get('/jquery', function(){
    return view('jquery.index');
@@ -30,5 +32,7 @@ Route::get('/html', function(){
 });
 
 Auth::routes();
+
+Route::get('/logika', 'TransactionController@hitung');
 
 Route::get('/home', 'HomeController@index')->name('home');

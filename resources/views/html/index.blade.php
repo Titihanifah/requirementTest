@@ -1,9 +1,10 @@
 @extends('layouts.temp')
+@section('title','Slicing Sederhana')
 @section('content')
 
 <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">PromoIklan</a>
+        <a class="navbar-brand" href="#">PartnerIklan.com</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +29,7 @@
 </nav>
 <!-- Start Banner -->
 <div class="img-fluid" alt="Responsive image">
-    <img class="d-block w-100" src="img/background2.jpg" alt="First slide" height="610px">
+    <img class="d-block w-100" src="{{ url('img/background2.jpg') }}" alt="First slide" height="610px">
 </div>
 <!-- End Banner -->
 <!-- Image Product -->
@@ -37,16 +38,15 @@
         <div class="row list-product ">
             <div class="col-lg-3 col-md-6 ">
                 <div class="hovereffect">
-                    <img src="img/about1.jpg" class="img-thumbnail">
+                    <img src="{{ url('img/about1.jpg') }}" class="img-thumbnail">
                     <div class="overlay">
                         <a class="info" id="btn-google">Google adwords</a>
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
                 <div class="hovereffect">
-                    <img src="img/about2.jpg" class="img-thumbnail">
+                    <img src="{{ url('img/about2.jpg') }}" class="img-thumbnail">
                     <div class="overlay">
                         <a class="info" id="btn-facebook">Facebook Ads</a>
                     </div>
@@ -54,7 +54,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="hovereffect">
-                    <img src="img/about1.jpg" class="img-thumbnail">
+                    <img src="{{ url('img/about1.jpg') }}" class="img-thumbnail">
                     <div class="overlay">
                         <a class="info" id="btn-seo">SEO</a>
                     </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="hovereffect">
-                    <img src="img/about2.jpg" class="img-thumbnail">
+                    <img src="{{ url('img/about2.jpg') }}" class="img-thumbnail">
                     <div class="overlay">
                         <a class="info" id="btn-training">Training</a>
                     </div>
@@ -78,7 +78,7 @@
     <div class="container">
         <div class="row details-product">
             <div class="col-md-4">
-                <img src="img/blog1.jpg" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/blog1.jpg') }}" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-8">
                 <h4>Google Adwords</h4>
@@ -93,12 +93,12 @@
                 <button class="btn btn-success float-right">Read More</button>
             </div>
             <div class="col-md-4">
-                <img src="img/blog2.jpg" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/blog2.jpg') }}" class="img-fluid" alt="Responsive image">
             </div>
         </div>
         <div class="row details-product">
             <div class="col-md-4">
-                <img src="img/blog3.jpg" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/blog3.jpg') }}" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-8">
                 <h4>Google Adwords</h4>
@@ -115,7 +115,7 @@
     <div class="container">
         <div class="row details-product">
             <div class="col-md-4">
-                <img src="img/blog1.jpg" class="img-fluid" alt="Responsive image">
+                <img src="{{ url('img/blog1.jpg') }}" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-8">
                 <h4>Facebook Ads</h4>
